@@ -19,4 +19,7 @@ h1 {
     justify-content: center;
 }
 
+#qi-form {
+    display: flex;
+    flex-direction: column;
 }
