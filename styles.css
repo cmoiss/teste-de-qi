@@ -1,3 +1,5 @@
+/*Add min height 200px in main*/
+
 * {
     margin: 0px;
     padding: 0px;
@@ -6,20 +8,26 @@
 main {
     display: flex;
     flex-direction: column;
-    margin: 10% auto;
     justify-content: center;
+    margin: 10% auto;
+    padding: 20px 30px 50px 30px;
     min-width: 320px;
-    max-width: 500px;
-    min-height: 200px;
+    max-width: 400px;
     background-color: aqua;
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
-#qi-form {
+.form.qi {
+    display: flex;
+    flex-direction: column;
+}
+
+.form.qi > .inputs {
     display: flex;
     flex-direction: column;
 }
