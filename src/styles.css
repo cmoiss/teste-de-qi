@@ -33,17 +33,20 @@ h1 {
     flex-direction: column;
 }
 
-.form.qi > .inputs {
+.form.qi>.inputs {
     display: flex;
     flex-direction: column;
     margin: 10px 20px 10px 20px;
 }
 
-.form.qi > .inputs input {
+.form.qi>.inputs input {
     margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid gray;
+    height: 30px;
 }
 
-.form.qi > button {
+.form.qi>button {
     margin: 10px 20px 10px 20px;
     padding: 8px;
     border-radius: 20px;
