@@ -13,3 +13,10 @@ main {
     min-height: 200px;
     background-color: aqua;
 }
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+}
