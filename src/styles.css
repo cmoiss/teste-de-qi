@@ -39,6 +39,10 @@ h1 {
     margin: 10px 20px 10px 20px;
 }
 
+.form.qi > .inputs input {
+    margin-bottom: 20px;
+}
+
 .form.qi > button {
     margin: 10px 20px 10px 20px;
 }
