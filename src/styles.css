@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'Trueno Round Bold font';
-    src: url(assets/fonts/TruenoRoundBd.otf);
-}
-
 * {
     margin: 0px;
     padding: 0px;
@@ -28,7 +23,6 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    font-family: 'Trueno Round Bold font';
 }
 
 .form.qi {
