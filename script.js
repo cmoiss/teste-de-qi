@@ -18,6 +18,8 @@ const gabarito = [
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
+    button.remove()
+
     const usuarioRespostas = [];
     const inputs = form.querySelectorAll('input[type="radio"]');
     inputs.forEach(input => {
