@@ -39,10 +39,9 @@ form.addEventListener('submit', function (event) {
     resultadoSection.style.display = 'block';
 
     resultadoSection.innerHTML = `
-    <h2>Resultado</h2>
-    <p>Gabarito:</p>
+    <h2>Gabarito</h2>
     <ol>
-      ${gabarito.map((resposta, index) => `<li>${resposta.resposta}</li>`).join('')}
+        ${gabarito.map((resposta, index) => `<li>${index + 1}. ${resposta.resposta}</li>`).join('')}
     </ol>
     <p>Sua pontuação: ${pontuacao} de 10</p>
   `;

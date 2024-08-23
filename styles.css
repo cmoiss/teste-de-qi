@@ -1,3 +1,5 @@
+/* Ajustar responsividade */
+
 * {
     margin: 0px;
     padding: 0px;
@@ -89,7 +91,8 @@ fieldset {
 }
 
 #resultado h2 {
-    margin-top: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #resultado ol {
@@ -102,10 +105,12 @@ fieldset {
     margin-bottom: 10px;
 }
 
+/*
 #resultado li:before {
     content: "• ";
     color: #5D3DE1;
 }
+*/
 
 #resultado #pontuacao {
     font-weight: bold;
