@@ -15,7 +15,7 @@ const gabarito = [
     { questao: 10, resposta: 'B) 36' }
 ];
 
-form.addEventListener('submit', function (event) {
+const handleSubmit = (event) => {
     const name = document.querySelector("input[name=name]").value;
     const email = document.querySelector("input[name=email]").value;
     const q1 = document.querySelector("input[name=q1]").value;
@@ -56,27 +56,29 @@ form.addEventListener('submit', function (event) {
     })
 
     const usuarioRespostas = [];
-    const inputs = form.querySelectorAll('input[type="radio"]');
-    inputs.forEach(input => {
-        if (input.checked) {
-            usuarioRespostas.push({ questao: input.name, resposta: input.value });
-        }
-    });
+const inputs = form.querySelectorAll('input[type="radio"]');
+inputs.forEach(input => {
+    if (input.checked) {
+        usuarioRespostas.push({ questao: input.name, resposta: input.value });
+    }
+});
 
-    let pontuacao = 0;
-    usuarioRespostas.forEach(resposta => {
-        const gabaritoResposta = gabarito.find(gabarito => gabarito.questao === parseInt(resposta.questao));
-        if (gabaritoResposta && gabaritoResposta.resposta === resposta.resposta) {
-            pontuacao++;
-        }
-    });
+let pontuacao = 0;
+usuarioRespostas.forEach(resposta => {
+    const gabaritoResposta = gabarito.find(gabarito => gabarito.questao === parseInt(resposta.questao));
+    if (gabaritoResposta && gabaritoResposta.resposta === resposta.resposta) {
+        pontuacao++;
+    }
+});
 
-    resultadoSection.style.display = 'block';
+resultadoSection.style.display = 'block';
 
-    resultadoSection.innerHTML = `
+resultadoSection.innerHTML = `
     <h2>Gabarito</h2>
     <ol>
         ${gabarito.map((resposta, index) => `<li>${index + 1}. ${resposta.resposta}</li>`).join('')}
     </ol>
   `;
-});
+}
+
+document.querySelector("form").addEventListener("submit", handleSubmit);
