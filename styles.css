@@ -57,6 +57,10 @@ fieldset {
     font-weight: 600;
 }
 
+.question-group {
+    display: block;
+}
+
 .form.qi>button {
     margin: 10px 20px 10px 20px;
     padding: 8px;
