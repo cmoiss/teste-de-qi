@@ -4,6 +4,11 @@ const handleSubmit = (event) => {
     const name = document.querySelector("input[name=name]");
     const email = document.querySelector("input[name=email]");
 
+    const addLoading = () => {
+        const button = document.querySelector("button");
+        button.innerHTML = '<img src="loading.png" class="loading">';
+    }
+
     fetch("https://api.sheetmonkey.io/form/2bseHC7mKXKjPqNj2Z3czm", {
         method: "post",
         headers: {
