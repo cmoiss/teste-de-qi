@@ -59,7 +59,7 @@ fieldset {
 
 .question-group {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .form.qi>button {
