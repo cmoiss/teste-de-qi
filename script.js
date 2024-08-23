@@ -1,3 +1,6 @@
+// Organizar código
+// Desabilitar inputs
+
 const form = document.querySelector('form');
 const resultadoSection = document.querySelector('#resultado');
 const button = document.querySelector('button');
@@ -18,16 +21,16 @@ const gabarito = [
 const handleSubmit = (event) => {
     const name = document.querySelector("input[name=name]").value;
     const email = document.querySelector("input[name=email]").value;
-    const q1 = document.querySelector("input[name=q1]").value;
-    const q2 = document.querySelector("input[name=q2]").value;
-    const q3 = document.querySelector("input[name=q3]").value;
-    const q4 = document.querySelector("input[name=q4]").value;
-    const q5 = document.querySelector("input[name=q5]").value;
-    const q6 = document.querySelector("input[name=q6]").value;
-    const q7 = document.querySelector("input[name=q7]").value;
-    const q8 = document.querySelector("input[name=q8]").value;
-    const q9 = document.querySelector("input[name=q9]").value;
-    const q10 = document.querySelector("input[name=q10]").value;
+    const q1 = document.querySelector("input[name=q1]:checked").value;
+    const q2 = document.querySelector("input[name=q2]:checked").value;
+    const q3 = document.querySelector("input[name=q3]:checked").value;
+    const q4 = document.querySelector("input[name=q4]:checked").value;
+    const q5 = document.querySelector("input[name=q5]:checked").value;
+    const q6 = document.querySelector("input[name=q6]:checked").value;
+    const q7 = document.querySelector("input[name=q7]:checked").value;
+    const q8 = document.querySelector("input[name=q8]:checked").value;
+    const q9 = document.querySelector("input[name=q9]:checked").value;
+    const q10 = document.querySelector("input[name=q10]:checked").value;
 
     event.preventDefault();
 
