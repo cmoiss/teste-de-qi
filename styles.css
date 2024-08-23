@@ -1,7 +1,3 @@
-/* Resolver rolagem lateral */
-/* Remover borda do fieldset */
-/* Listar perguntas */
-
 * {
     margin: 0px;
     padding: 0px;
@@ -35,7 +31,7 @@ h1 {
 }
 
 fieldset {
-    /*border-style: none;*/
+    border-style: none;
 }
 
 .form.qi>.inputs {
