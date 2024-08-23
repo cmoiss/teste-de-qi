@@ -5,13 +5,14 @@
 
 body {
     background-color: #F5F5F5;
+    padding-top: 10px;
 }
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 10% auto;
+    margin: 0px auto 0px auto;
     padding: 40px 30px 50px 30px;
     min-width: 250px;
     max-width: 400px;
@@ -75,4 +76,20 @@ fieldset {
     color: white;
     font-weight: 700;
     cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
