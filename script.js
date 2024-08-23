@@ -16,9 +16,44 @@ const gabarito = [
 ];
 
 form.addEventListener('submit', function (event) {
+    const name = document.querySelector("input[name=name]").value;
+    const email = document.querySelector("input[name=email]").value;
+    const q1 = document.querySelector("input[name=q1]").value;
+    const q2 = document.querySelector("input[name=q2]").value;
+    const q3 = document.querySelector("input[name=q3]").value;
+    const q4 = document.querySelector("input[name=q4]").value;
+    const q5 = document.querySelector("input[name=q5]").value;
+    const q6 = document.querySelector("input[name=q6]").value;
+    const q7 = document.querySelector("input[name=q7]").value;
+    const q8 = document.querySelector("input[name=q8]").value;
+    const q9 = document.querySelector("input[name=q9]").value;
+    const q10 = document.querySelector("input[name=q10]").value;
+
     event.preventDefault();
 
     button.remove()
+
+    fetch("https://api.sheetmonkey.io/form/2bseHC7mKXKjPqNj2Z3czm", {
+        method: "post",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            name,
+            email,
+            q1,
+            q2,
+            q3,
+            q4,
+            q5,
+            q6,
+            q7,
+            q8,
+            q9,
+            q10,
+        })
+    })
 
     const usuarioRespostas = [];
     const inputs = form.querySelectorAll('input[type="radio"]');
@@ -43,6 +78,5 @@ form.addEventListener('submit', function (event) {
     <ol>
         ${gabarito.map((resposta, index) => `<li>${index + 1}. ${resposta.resposta}</li>`).join('')}
     </ol>
-    <p>Sua pontuação: ${pontuacao} de 10</p>
   `;
 });
