@@ -45,6 +45,7 @@ fieldset {
     border: none;
     border-bottom: 2px solid gray;
     height: 30px;
+    background-color: #F5F5F5;
 }
 
 ::placeholder {
