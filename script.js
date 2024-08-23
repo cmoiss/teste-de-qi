@@ -1,5 +1,7 @@
 const form = document.querySelector('form');
 const resultadoSection = document.querySelector('#resultado');
+const button = document.querySelector('button');
+
 const gabarito = [
     { questao: 1, resposta: 'D) 80' },
     { questao: 2, resposta: 'C) Desorganizar' },
@@ -15,8 +17,6 @@ const gabarito = [
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    form.style.display = 'none';
-    resultadoSection.style.display = 'block';
 
     const usuarioRespostas = [];
     const inputs = form.querySelectorAll('input[type="radio"]');
@@ -33,6 +33,8 @@ form.addEventListener('submit', function (event) {
             pontuacao++;
         }
     });
+
+    resultadoSection.style.display = 'block';
 
     resultadoSection.innerHTML = `
     <h2>Resultado</h2>

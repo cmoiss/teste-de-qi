@@ -92,7 +92,7 @@ fieldset {
     margin-top: 0;
 }
 
-#resultado ul {
+#resultado ol {
     list-style: none;
     padding: 0;
     margin: 0;
