@@ -1,12 +1,22 @@
-// Seleciona o formulário e o botão submit
 const form = document.querySelector('form');
-const submitButton = document.querySelector('input[type="submit"]');
+const resultadoSection = document.querySelector('#resultado');
 
-// Adiciona um evento de click ao botão submit
-submitButton.addEventListener('click', function(event) {
-  // Previne o comportamento padrão do formulário (enviar o formulário para o servidor)
-  event.preventDefault();
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    form.style.display = 'none';
+    resultadoSection.style.display = 'block';
 
-  // Redireciona para a página final
-  window.location.href = 'pagina-final.html';
+    // Preencher a seção de resultado com o gabarito e a pontuação do usuário
+    const gabarito = [...]; // array com as respostas certas
+    const usuarioRespostas = [...]; // array com as respostas do usuário
+    const pontuacao = 0; // pontuação do usuário
+
+    resultadoSection.innerHTML = `
+    <h2>Resultado</h2>
+    <p>Gabarito:</p>
+    <ul>
+      ${gabarito.map((resposta, index) => `<li>${index + 1}. ${resposta}</li>`).join('')}
+    </ul>
+    <p>Sua pontuação: ${pontuacao}</p>
+  `;
 });
